@@ -1,5 +1,5 @@
 //SPDX-License-Identifier: Unlicenced
-pragma solidity >=0.4.0;
+pragma solidity ^0.8.0;
 
 contract lottery {
     address public manager;
@@ -9,7 +9,7 @@ contract lottery {
         manager = msg.sender;
     }
 
-    receive() external payable {
+    receive () external payable {
         require(msg.value == 0.1 ether);
         Participants.push(payable(msg.sender));
     }

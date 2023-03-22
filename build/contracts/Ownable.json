@@ -1,0 +1,260 @@
+{
+  "contractName": "Ownable",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Ownable.sol\":\"Ownable\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Ownable.sol\":{\"keccak256\":\"0xe6c50419915a80c49e69cecb2c9152f331a3bea2272756fb7183183a9e33d326\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://92edd243d75a91cad9bdc393053f8194e4bb2600f893c126a35f6d9936e71383\",\"dweb:/ipfs/QmUTps9TPJhn26zV2iJ4b4H9jHH3rZbFENYQ6BoLz2rhBm\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220617bd5f5e92c05a68b8b5c5f2151f1be2c63f8a42c19abb82e829d3981927f6464736f6c63430008130033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220617bd5f5e92c05a68b8b5c5f2151f1be2c63f8a42c19abb82e829d3981927f6464736f6c63430008130033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "64:168:4:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "64:168:4:-:0;;;;;",
+  "source": "//SPDX-License-Identifier: UNLICENSED\r\npragma solidity ^0.8.0;\r\ncontract Ownable{\r\n    address owner;\r\n    modifier onlyowner\r\n    {\r\n        require(msg.sender == owner, \"only owner can process transactions\");\r\n        _;\r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\Aftab\\Desktop\\Project Blockchain\\contracts\\Ownable.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Ownable.sol",
+    "exportedSymbols": {
+      "Ownable": [
+        288
+      ]
+    },
+    "id": 289,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 273,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:4"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Ownable",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 288,
+        "linearizedBaseContracts": [
+          288
+        ],
+        "name": "Ownable",
+        "nameLocation": "73:7:4",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 275,
+            "mutability": "mutable",
+            "name": "owner",
+            "nameLocation": "95:5:4",
+            "nodeType": "VariableDeclaration",
+            "scope": 288,
+            "src": "87:13:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 274,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "87:7:4",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 286,
+              "nodeType": "Block",
+              "src": "131:98:4",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 281,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "expression": {
+                            "id": 278,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4294967281,
+                            "src": "150:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 279,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "154:6:4",
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "150:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "id": 280,
+                          "name": "owner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 275,
+                          "src": "164:5:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "150:19:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "6f6e6c79206f776e65722063616e2070726f63657373207472616e73616374696f6e73",
+                        "id": 282,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "171:37:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_e772498a740cf300b9162ca384409b516ee0f0654667c47c588137e19b8f72d4",
+                          "typeString": "literal_string \"only owner can process transactions\""
+                        },
+                        "value": "only owner can process transactions"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_e772498a740cf300b9162ca384409b516ee0f0654667c47c588137e19b8f72d4",
+                          "typeString": "literal_string \"only owner can process transactions\""
+                        }
+                      ],
+                      "id": 277,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
+                      "referencedDeclaration": 4294967278,
+                      "src": "142:7:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 283,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "142:67:4",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 284,
+                  "nodeType": "ExpressionStatement",
+                  "src": "142:67:4"
+                },
+                {
+                  "id": 285,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "220:1:4"
+                }
+              ]
+            },
+            "id": 287,
+            "name": "onlyowner",
+            "nameLocation": "116:9:4",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 276,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "131:0:4"
+            },
+            "src": "107:122:4",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 289,
+        "src": "64:168:4",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:193:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.19+commit.7dd6d404.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x58064BEC69990D16E7978213d2157f7Fb3403070",
+      "transactionHash": "0xd0fe1d848fad726e4347309e59cc6448096b3c045efd96dfab147f56ad014985"
+    }
+  },
+  "schemaVersion": "3.4.11",
+  "updatedAt": "2023-03-22T10:40:01.315Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

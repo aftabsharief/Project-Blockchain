@@ -1,4 +1,5 @@
-pragma solidity ^0.5.0;
+//SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.0;
 
 contract Test {
    address public richest;
@@ -23,6 +24,6 @@ contract Test {
    function withdraw() public {
       uint amount = pendingWithdrawals[msg.sender];
       pendingWithdrawals[msg.sender] = 0;
-      msg.sender.transfer(amount);
+      payable(msg.sender).transfer(amount);
    }
 }
